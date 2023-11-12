@@ -7,4 +7,4 @@
             Console.WriteLine(args[0]);//outside the argument array
         }
     }
-}
+}//note to self. figure out debugger
