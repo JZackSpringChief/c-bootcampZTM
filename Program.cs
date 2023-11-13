@@ -37,6 +37,17 @@ namespace test
             double x = 7.8d;
             decimal dec = 7.15m;
             Console.WriteLine($"float: {z}, double: {x}, decimal: {dec}");
+
+            //copying values;
+            int a1 = 7;
+            int a2 = a1;
+            a1 = 4;
+            Console.WriteLine($"a1: {a1}, a2: {a2}");
+
+            //Nullable value types;
+            int? aa = null;
+            bool? bb = null;
+            Console.WriteLine($"int?: {aa}, bool?: {bb}");
         }
     }
 }
