@@ -50,20 +50,24 @@ namespace test
             // Console.WriteLine($"int?: {aa}, bool?: {bb}");
 
             //implicit vs explicit
-            int age = 33;
-            float weight = 72.3f;
-            Console.WriteLine($"age: {age}, Weight: {weight}");
+            // int age = 33;
+            // float weight = 72.3f;
+            // Console.WriteLine($"age: {age}, Weight: {weight}");
 
-            //implicit
-            long myAge = age;
+            // //implicit
+            // long myAge = age;
 
-            //explicit;
-            int lessWeight = (int)weight;
-                                //this is casting...
+            // //explicit;
+            // int lessWeight = (int)weight;
+            //                     //this is casting...
 
-            long bigNum = 1111111111111111111;
-            int smallNum = (int)bigNum;
-            Console.WriteLine(smallNum);
+            // long bigNum = 1111111111111111111;
+            // int smallNum = (int)bigNum;
+            // Console.WriteLine(smallNum);
+            string luckyNum = "17";
+            int parsedLuckyNum = int.Parse(luckyNum);
+            double temp = double.Parse("5.1");
+            
         }
     }
 }
