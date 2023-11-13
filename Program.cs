@@ -72,19 +72,54 @@ namespace test
             //Date and Time;
             // DateTime dateOfBirth = new(1989, 11, 30);
             // Console.WriteLine(dateOfBirth.DayOfWeek);
-            int winningNum = 68;
-            if (winningNum == 68)
+            // int winningNum = 68;
+            // if (winningNum == 68)
+            // {
+            //     Console.WriteLine("lucky lucky");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("NOPE");
+            // }
+
+            // int myG = 34;
+            // string myAge = myG == 34 ? "34" : "33";
+            // Console.WriteLine(myAge);
+
+            // int a = 1;
+            // while (a <= 5)
+            // {
+            //     Console.WriteLine($"While: {a}");
+            //     a++;
+            // }
+
+            // int b = 1;
+            // do
+            // {
+            //     Console.WriteLine($"do-while: {b}");
+            //     b++;
+            // } while(b < 5);
+
+            // for( int i = 0; i < 20; i++)
+            // {
+            //     if (i > 10)
+            //     {
+            //         Console.WriteLine($"I will end at 19: {i}");
+            //     }
+            // }
+
+            Console.WriteLine("Enter you birthday: ");
+
+            string birthday = Console.ReadLine();
+
+            if (birthday == "November 30th")
             {
-                Console.WriteLine("lucky lucky");
+                Console.WriteLine("Happy birthday");
             }
             else
             {
-                Console.WriteLine("NOPE");
+                Console.WriteLine("Not your birthday");
             }
-
-            int myG = 34;
-            string myAge = myG == 34 ? "34" : "33";
-            Console.WriteLine(myAge);
         }   
     }
 }
