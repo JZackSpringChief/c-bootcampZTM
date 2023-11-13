@@ -70,10 +70,22 @@ namespace test
             
 
             //Date and Time;
-            DateTime dateOfBirth = new(1989, 11, 30);
-            Console.WriteLine(dateOfBirth.DayOfWeek);
+            // DateTime dateOfBirth = new(1989, 11, 30);
+            // Console.WriteLine(dateOfBirth.DayOfWeek);
+            int winningNum = 68;
+            if (winningNum == 68)
+            {
+                Console.WriteLine("lucky lucky");
+            }
+            else
+            {
+                Console.WriteLine("NOPE");
+            }
 
-        }
+            int myG = 34;
+            string myAge = myG == 34 ? "34" : "33";
+            Console.WriteLine(myAge);
+        }   
     }
 }
 // value types
