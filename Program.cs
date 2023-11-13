@@ -64,10 +64,15 @@ namespace test
             // long bigNum = 1111111111111111111;
             // int smallNum = (int)bigNum;
             // Console.WriteLine(smallNum);
-            string luckyNum = "17";
-            int parsedLuckyNum = int.Parse(luckyNum);
-            double temp = double.Parse("5.1");
+            // string luckyNum = "17";
+            // int parsedLuckyNum = int.Parse(luckyNum);
+            // double temp = double.Parse("5.1");
             
+
+            //Date and Time;
+            DateTime dateOfBirth = new(1989, 11, 30);
+            Console.WriteLine(dateOfBirth.DayOfWeek);
+
         }
     }
 }
