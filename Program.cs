@@ -130,22 +130,44 @@
                 {
                     Console.WriteLine("do you want to add, subtract, divide or Multiply?");
 
-                    string? decide = Console.ReadLine();
+                    string? z = Console.ReadLine();
 
-                    switch (decide)
+                    switch (z)
                     {
                         case "Multiply":
-                        Console.WriteLine("Pick 2 numbers");
+                        Console.WriteLine("Enter 2 numbers");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+                        break;
+
+                         case "Add":
+                        Console.WriteLine("Enter 2 numbers");
+                        int b1 = Convert.ToInt32(Console.ReadLine());
+                        int a1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"a was: {a1} and b was: {b1}. Added they are: {a1 + b1}!");
+                        break;
+
+                         case "Subtract":
+                        Console.WriteLine("Enter 2 numbers");
+                        int a2 = Convert.ToInt32(Console.ReadLine());
+                        int b2 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"a was: {a2} and b was: {b2}. Subtracted they are: {a2 - b2}!");
+                        break;
+
+                        case "Divide":
+                        Console.WriteLine("Enter 2 numbers");
+                        int a3 = Convert.ToInt32(Console.ReadLine());
+                        int b3 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"a was: {a3} and b was: {b3}. Divided they are: {a3 / b3}!");
+                        break;
+
+                        default:
+                        Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!");
+                        break;
+
                     }
-
-
-                    Console.WriteLine("Enter 2 numbers");
-                    int a = Convert.ToInt32(Console.ReadLine());
-                    int b = Convert.ToInt32(Console.ReadLine());
                     tries++;
-
-                    Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
-                    Console.WriteLine("would you like do another calculation? Y or N");
                 }
                 else if (v == "N")
                 {
