@@ -1,6 +1,4 @@
-﻿using System.Net.Sockets;
-
-namespace test
+﻿namespace test
 {
     internal class Program
     {
@@ -120,23 +118,60 @@ namespace test
             // {
             //     Console.WriteLine("Not your birthday");
             // }
-
-            Console.WriteLine("Enter 2 numbers");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
-            Console.WriteLine("would you like to play again? Y or N");
-
-            string game = Console.ReadLine();
-            if (game == "Y")
+            int tries = 0;
+            do 
             {
-                Console.WriteLine("lets go");
-            }
-            else
-            {
-                Console.WriteLine("ending...");
-            }
+                Console.WriteLine("Would you like to try a math game? Y or N");
+
+                string? v = Console.ReadLine();
+                string answer = v;
+
+                if(v == "Y")
+                {
+                    Console.WriteLine("do you want to add, subtract, divide or Multiply?");
+
+                    string? decide = Console.ReadLine();
+
+                    switch (decide)
+                    {
+                        case "Multiply":
+                        Console.WriteLine("Pick 2 numbers");
+                    }
+
+
+                    Console.WriteLine("Enter 2 numbers");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    int b = Convert.ToInt32(Console.ReadLine());
+                    tries++;
+
+                    Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+                    Console.WriteLine("would you like do another calculation? Y or N");
+                }
+                else if (v == "N")
+                {
+                    Console.WriteLine("Understandable, Have a good day");
+                    tries = 2;
+                }
+                else
+                {
+                    Console.WriteLine("Must answer Y or N");
+                }
+            } while (tries < 2);
+
+            
+            
+
+            
+
+            // string game = Console.ReadLine();
+            // if (game == "Y")
+            // {
+            //     Console.WriteLine("lets go");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("ending...");
+            // }
         }   
     }
 }
