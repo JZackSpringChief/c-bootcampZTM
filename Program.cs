@@ -108,17 +108,34 @@ namespace test
             //     }
             // }
 
-            Console.WriteLine("Enter you birthday: ");
+            // Console.WriteLine("Enter you birthday: ");
 
-            string birthday = Console.ReadLine();
+            // string birthday = Console.ReadLine();
 
-            if (birthday == "November 30th")
+            // if (birthday == "November 30th")
+            // {
+            //     Console.WriteLine("Happy birthday");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Not your birthday");
+            // }
+
+            Console.WriteLine("Enter 2 numbers");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+            Console.WriteLine("would you like to play again? Y or N");
+
+            string game = Console.ReadLine();
+            if (game == "Y")
             {
-                Console.WriteLine("Happy birthday");
+                Console.WriteLine("lets go");
             }
             else
             {
-                Console.WriteLine("Not your birthday");
+                Console.WriteLine("ending...");
             }
         }   
     }
