@@ -194,8 +194,8 @@
                         case "Divide":
                         case "divide":
                         Console.WriteLine("Enter 2 numbers");
-                        int a3 = Convert.ToInt32(Console.ReadLine());
-                        int b3 = Convert.ToInt32(Console.ReadLine());
+                        decimal a3 = Convert.ToInt32(Console.ReadLine());
+                        decimal b3 = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine($"a was: {a3} and b was: {b3}. Divided they are: {a3 / b3}!");
                         continue;
 
