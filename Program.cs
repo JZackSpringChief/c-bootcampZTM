@@ -165,6 +165,19 @@
                        Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!"); 
                     }
 
+                    tries++;
+                }
+                else if (v == "N" || v == "n")
+                {
+                    Console.WriteLine("Understandable, Have a good day");
+                    tries = 2;
+                }
+                else
+                {
+                    Console.WriteLine("Must answer Y or N");
+                }
+            } while (tries < 2);
+
                     // switch (z)
                     // {
                     //     case "Multiply":
@@ -200,19 +213,6 @@
                     //     break;
 
                     // }
-                    tries++;
-                }
-                else if (v == "N" || v == "n")
-                {
-                    Console.WriteLine("Understandable, Have a good day");
-                    tries = 2;
-                }
-                else
-                {
-                    Console.WriteLine("Must answer Y or N");
-                }
-            } while (tries < 2);
-
             
             
 
