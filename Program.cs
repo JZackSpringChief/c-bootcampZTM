@@ -126,50 +126,83 @@
                 string? v = Console.ReadLine();
                 string answer = v;
 
-                if(v == "Y")
+                if(v == "Y" || v == "y")
                 {
                     Console.WriteLine("do you want to add, subtract, divide or Multiply?");
 
                     string? z = Console.ReadLine();
 
-                    switch (z)
+                    if(z == "Multiply" || z == "multiply")
                     {
-                        case "Multiply":
-                        Console.WriteLine("Enter 2 numbers");
-                        int a = Convert.ToInt32(Console.ReadLine());
-                        int b = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
-                        break;
-
-                         case "Add":
+                       Console.WriteLine("Enter 2 numbers");
+                       int a = Convert.ToInt32(Console.ReadLine());
+                       int b = Convert.ToInt32(Console.ReadLine());
+                       Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!"); 
+                    }
+                    else if(z == "Add" || z == "add")
+                    {
                         Console.WriteLine("Enter 2 numbers");
                         int b1 = Convert.ToInt32(Console.ReadLine());
                         int a1 = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine($"a was: {a1} and b was: {b1}. Added they are: {a1 + b1}!");
-                        break;
-
-                         case "Subtract":
+                    }
+                    else if(z == "Subtract" || z == "subtract")
+                    {
                         Console.WriteLine("Enter 2 numbers");
                         int a2 = Convert.ToInt32(Console.ReadLine());
                         int b2 = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine($"a was: {a2} and b was: {b2}. Subtracted they are: {a2 - b2}!");
-                        break;
-
-                        case "Divide":
+                    }
+                    else if (z == "Divide" || z == "divide")
+                    {
                         Console.WriteLine("Enter 2 numbers");
                         int a3 = Convert.ToInt32(Console.ReadLine());
                         int b3 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"a was: {a3} and b was: {b3}. Divided they are: {a3 / b3}!");
-                        break;
-
-                        default:
-                        Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!");
-                        break;
-
+                        Console.WriteLine($"a was: {a3} and b was: {b3}. Divided they are: {a3 / b3}!"); 
                     }
+                    else
+                    {
+                       Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!"); 
+                    }
+
+                    // switch (z)
+                    // {
+                    //     case "Multiply":
+                    //     Console.WriteLine("Enter 2 numbers");
+                    //     int a = Convert.ToInt32(Console.ReadLine());
+                    //     int b = Convert.ToInt32(Console.ReadLine());
+                    //     Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+                    //     break;
+
+                    //      case "Add":
+                    //     Console.WriteLine("Enter 2 numbers");
+                    //     int b1 = Convert.ToInt32(Console.ReadLine());
+                    //     int a1 = Convert.ToInt32(Console.ReadLine());
+                    //     Console.WriteLine($"a was: {a1} and b was: {b1}. Added they are: {a1 + b1}!");
+                    //     break;
+
+                    //      case "Subtract":
+                    //     Console.WriteLine("Enter 2 numbers");
+                    //     int a2 = Convert.ToInt32(Console.ReadLine());
+                    //     int b2 = Convert.ToInt32(Console.ReadLine());
+                    //     Console.WriteLine($"a was: {a2} and b was: {b2}. Subtracted they are: {a2 - b2}!");
+                    //     break;
+
+                    //     case "Divide":
+                    //     Console.WriteLine("Enter 2 numbers");
+                    //     int a3 = Convert.ToInt32(Console.ReadLine());
+                    //     int b3 = Convert.ToInt32(Console.ReadLine());
+                    //     Console.WriteLine($"a was: {a3} and b was: {b3}. Divided they are: {a3 / b3}!");
+                    //     break;
+
+                    //     default:
+                    //     Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!");
+                    //     break;
+
+                    // }
                     tries++;
                 }
-                else if (v == "N")
+                else if (v == "N" || v == "n")
                 {
                     Console.WriteLine("Understandable, Have a good day");
                     tries = 2;
