@@ -216,21 +216,6 @@
                     Console.WriteLine("Must answer Y or N");
                 }
             } while (tries < 2);
-
-  
-            
-
-            
-
-            // string game = Console.ReadLine();
-            // if (game == "Y")
-            // {
-            //     Console.WriteLine("lets go");
-            // }
-            // else
-            // {
-            //     Console.WriteLine("ending...");
-            // }
         }   
     }
 }
