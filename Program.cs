@@ -162,7 +162,7 @@
 
                 if (v == "y")
                 {
-                    Console.WriteLine("do you want to add, subtract, divide or Multiply?");
+                    Console.WriteLine("do you want to Add, Subtract, Divide or Multiply?");
 
                     string? z = Console.ReadLine();
                     z = z.ToLower();
