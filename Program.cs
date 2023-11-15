@@ -156,15 +156,14 @@
             {
                 Console.WriteLine("Would you like to try a math game? Y or N");
 
-                string? v = Console.ReadLine();
-                string answer = v;
+                string v = Console.ReadLine();
                 v = v.ToLower();
 
                 if (v == "y")
                 {
                     Console.WriteLine("do you want to Add, Subtract, Divide or Multiply?");
 
-                    string? z = Console.ReadLine();
+                    string z = Console.ReadLine();
                     z = z.ToLower();
 
                     switch (z)
