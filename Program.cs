@@ -209,8 +209,6 @@
         }
     }
 }
-// value types
-//do while loop
-//create function next -- done.
 //simplify functions
 //add testing
+//type casting is so cool
