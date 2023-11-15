@@ -213,3 +213,4 @@
 //do while loop
 //create function next -- done.
 //simplify functions
+//add testing
