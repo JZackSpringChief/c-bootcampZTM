@@ -175,7 +175,7 @@
                     }
                     tries++;
                 }
-                else if (v == "N" || v == "n")
+                else if (v == "n")
                 {
                     Console.WriteLine("Understandable, Have a good day");
                     tries = 2;
