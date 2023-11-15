@@ -118,9 +118,37 @@
             // {
             //     Console.WriteLine("Not your birthday");
             // }
-            static void Add(a, b)
+            static void Add()
             {
-                
+                Console.WriteLine("Enter 2 numbers");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine()); 
+                Console.WriteLine($"a was: {a} and b was: {b}. Added they are: {a + b}!");
+
+            }
+               static void Subtract()
+            {
+                Console.WriteLine("Enter 2 numbers");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine()); 
+                Console.WriteLine($"a was: {a} and b was: {b}. Subtracted they are: {a - b}!");
+
+            }
+               static void Multiply()
+            {
+                Console.WriteLine("Enter 2 numbers");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine()); 
+                Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+
+            }
+               static void Divide()
+            {
+                Console.WriteLine("Enter 2 numbers");
+                decimal a = Convert.ToInt32(Console.ReadLine());
+                decimal b = Convert.ToInt32(Console.ReadLine()); 
+                Console.WriteLine($"a was: {a} and b was: {b}. Divided they are: {a / b}!");
+
             }
 
             int tries = 0;
@@ -143,34 +171,22 @@
                     {
                         case "multiply":
                         
-                        Console.WriteLine("Enter 2 numbers");
-                        int a = Convert.ToInt32(Console.ReadLine());
-                        int b = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+                        Multiply();
                         continue;
 
                         case "add":
 
-                        Console.WriteLine("Enter 2 numbers");
-                        int b1 = Convert.ToInt32(Console.ReadLine());
-                        int a1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"a was: {a1} and b was: {b1}. Added they are: {a1 + b1}!");
+                        Add();
                         continue;
 
                         case "subtract":
 
-                        Console.WriteLine("Enter 2 numbers");
-                        int a2 = Convert.ToInt32(Console.ReadLine());
-                        int b2 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"a was: {a2} and b was: {b2}. Subtracted they are: {a2 - b2}!");
+                        Subtract();
                         continue;
 
                         case "divide":
 
-                        Console.WriteLine("Enter 2 numbers");
-                        decimal a3 = Convert.ToInt32(Console.ReadLine());
-                        decimal b3 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"a was: {a3} and b was: {b3}. Divided they are: {a3 / b3}!");
+                        Divide();
                         continue;
 
                         default:
