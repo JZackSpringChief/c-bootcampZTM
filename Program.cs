@@ -211,4 +211,5 @@
 }
 // value types
 //do while loop
-//create function next
+//create function next -- done.
+//simplify functions
