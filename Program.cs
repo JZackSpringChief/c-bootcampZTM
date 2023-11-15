@@ -118,6 +118,11 @@
             // {
             //     Console.WriteLine("Not your birthday");
             // }
+            static void Add(a, b)
+            {
+                
+            }
+
             int tries = 0;
             do 
             {
