@@ -11,6 +11,11 @@ Console.WriteLine(p2.Age);
 Console.WriteLine(p3.InSchool);
 
 p1.PrintGreeting();
+string greeting = p1.GetGreeting();
+Math add = new();
+int result = add.Sum(10, 77);
+Console.WriteLine(result);
+
 
 Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
 
@@ -32,6 +37,10 @@ class Person
     {
         Console.WriteLine($"Hello, {Name}");
     }
+    public string GetGreeting()
+    {
+        return $"Hello, {Name}";
+    }
 }
 class Hero
 {
@@ -44,4 +53,13 @@ class Hero
     public string Name { get; set; }
     public int Attack { get; set; }
     public int Defense { get; set; }
+}
+
+public class Math
+{
+    public int Sum(int a, int b)
+    {
+        return a + b;
+    }
+
 }
