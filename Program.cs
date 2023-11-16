@@ -118,93 +118,94 @@
             // {
             //     Console.WriteLine("Not your birthday");
             // }
-            static void Add()
-            {
-                Console.WriteLine("Enter 2 numbers");
-                int a = Convert.ToInt32(Console.ReadLine());
-                int b = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"a was: {a} and b was: {b}. Added they are: {a + b}!");
+            // static void Add()
+            // {
+            //     Console.WriteLine("Enter 2 numbers");
+            //     int a = Convert.ToInt32(Console.ReadLine());
+            //     int b = Convert.ToInt32(Console.ReadLine());
+            //     Console.WriteLine($"a was: {a} and b was: {b}. Added they are: {a + b}!");
 
-            }
-            static void Subtract()
-            {
-                Console.WriteLine("Enter 2 numbers");
-                int a = Convert.ToInt32(Console.ReadLine());
-                int b = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"a was: {a} and b was: {b}. Subtracted they are: {a - b}!");
+            // }
+            // static void Subtract()
+            // {
+            //     Console.WriteLine("Enter 2 numbers");
+            //     int a = Convert.ToInt32(Console.ReadLine());
+            //     int b = Convert.ToInt32(Console.ReadLine());
+            //     Console.WriteLine($"a was: {a} and b was: {b}. Subtracted they are: {a - b}!");
 
-            }
-            static void Multiply()
-            {
-                Console.WriteLine("Enter 2 numbers");
-                int a = Convert.ToInt32(Console.ReadLine());
-                int b = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
+            // }
+            // static void Multiply()
+            // {
+            //     Console.WriteLine("Enter 2 numbers");
+            //     int a = Convert.ToInt32(Console.ReadLine());
+            //     int b = Convert.ToInt32(Console.ReadLine());
+            //     Console.WriteLine($"a was: {a} and b was: {b}. Multiplied they are: {a * b}!");
 
-            }
-            static void Divide()
-            {
-                Console.WriteLine("Enter 2 numbers");
-                decimal a = Convert.ToInt32(Console.ReadLine());
-                decimal b = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"a was: {a} and b was: {b}. Divided they are: {a / b}!");
+            // }
+            // static void Divide()
+            // {
+            //     Console.WriteLine("Enter 2 numbers");
+            //     decimal a = Convert.ToInt32(Console.ReadLine());
+            //     decimal b = Convert.ToInt32(Console.ReadLine());
+            //     Console.WriteLine($"a was: {a} and b was: {b}. Divided they are: {a / b}!");
 
-            }
+            // }
 
-            int tries = 0;
-            do
-            {
-                Console.WriteLine("Would you like to try a math game? Y or N");
+            // int tries = 0;
+            // do
+            // {
+            //     Console.WriteLine("Would you like to try a math game? Y or N");
 
-                string v = Console.ReadLine();
-                v = v.ToLower();
+            //     string v = Console.ReadLine();
+            //     v = v.ToLower();
 
-                if (v == "y")
-                {
-                    Console.WriteLine("do you want to Add, Subtract, Divide or Multiply?");
+            //     if (v == "y")
+            //     {
+            //         Console.WriteLine("do you want to Add, Subtract, Divide or Multiply?");
 
-                    string z = Console.ReadLine();
-                    z = z.ToLower();
+            //         string z = Console.ReadLine();
+            //         z = z.ToLower();
 
-                    switch (z)
-                    {
-                        case "multiply":
+            //         switch (z)
+            //         {
+            //             case "multiply":
 
-                            Multiply();
-                            continue;
+            //                 Multiply();
+            //                 continue;
 
-                        case "add":
+            //             case "add":
 
-                            Add();
-                            continue;
+            //                 Add();
+            //                 continue;
 
-                        case "subtract":
+            //             case "subtract":
 
-                            Subtract();
-                            continue;
+            //                 Subtract();
+            //                 continue;
 
-                        case "divide":
+            //             case "divide":
 
-                            Divide();
-                            continue;
+            //                 Divide();
+            //                 continue;
 
-                        default:
-                            Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!");
-                            break;
+            //             default:
+            //                 Console.WriteLine("Please explicitly spell out Add, Subtract, Divide or Multiply!");
+            //                 break;
 
-                    }
-                    tries++;
-                }
-                else if (v == "n")
-                {
-                    Console.WriteLine("Understandable, Have a good day");
-                    tries = 2;
-                }
-                else
-                {
-                    Console.WriteLine("Must answer Y or N");
-                }
-            } while (tries < 2);
+            //         }
+            //         tries++;
+            //     }
+            //     else if (v == "n")
+            //     {
+            //         Console.WriteLine("Understandable, Have a good day");
+            //         tries = 2;
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine("Must answer Y or N");
+            //     }
+            // } while (tries < 2);
+
         }
     }
 }
