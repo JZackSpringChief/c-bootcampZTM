@@ -1,20 +1,14 @@
-﻿Person p1 = new();
-Person p2 = new();
+﻿Person p1 = new("zack");
+Person p2 = new("kyle");
 
-p1.Name = "Kyle";
 Console.WriteLine(p1.Name);
 
 class Person
 {
-    private string name;
-    public Person()
+    public Person(string name)
     {
-        name = "zack";
-    }
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
+        Name = name;
     }
 
+    public string Name { get; private set; }
 }
