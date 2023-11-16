@@ -10,6 +10,8 @@ Console.WriteLine(p1.Name);
 Console.WriteLine(p2.Age);
 Console.WriteLine(p3.InSchool);
 
+p1.PrintGreeting();
+
 Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
 
 
@@ -25,6 +27,11 @@ class Person
     public string Name { get; private set; }
     public int Age { get; private set; }
     public bool InSchool { get; private set; }
+
+    public void PrintGreeting()
+    {
+        Console.WriteLine($"Hello, {Name}");
+    }
 }
 class Hero
 {
