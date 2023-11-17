@@ -1,16 +1,31 @@
-﻿using Namespaces.Data;
-Person person = new();
-int result = SuperMath.Sum(10, 32);
-Console.WriteLine(result);
-Console.WriteLine(SuperMath.PI);
-public static class SuperMath
+﻿public interface ICar
 {
-    public static int Sum(int a, int b)
+    string GetModel();
+    int GetTopSpeed();
+}
+
+public class ToyotaTacoma : ICar
+{
+    public string GetModel()
     {
-        return a + b;
+        return "Toyota Tacoma";
     }
-    public static double PI
+
+    public int GetTopSpeed()
     {
-        get { return 3.14734d; }
+        return 300;
+    }
+}
+
+public class NissanZ : ICar
+{
+    public string GetModel()
+    {
+        return "Nissan Z";
+    }
+
+    public int GetTopSpeed()
+    {
+        return 400;
     }
 }
