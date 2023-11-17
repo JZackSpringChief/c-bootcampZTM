@@ -1,9 +1,4 @@
 ﻿// Hero h1 = new("Blair", 9999, 9999);
-
-// Console.WriteLine(p1.Name);
-// Console.WriteLine(p2.Age);
-// Console.WriteLine(p3.InSchool);
-
 // p1.PrintGreeting();
 // string greeting = p1.GetGreeting();
 // Math add = new();
