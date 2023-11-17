@@ -1,22 +1,27 @@
-﻿//method overloading
-Account account2 = new("Kyle");
-Account account1 = new("zack", 20);
+﻿//Inheritance
+Person p1 = new("Aric");
+Employee p2 = new("Zack", "CEO");
 
-Console.WriteLine(account1.Balance);
-Console.WriteLine(account2.Balance);
-public class Account
+Console.WriteLine($"{p1.Name}: {p1.GetId()}");
+Console.WriteLine($"{p2.Name}: {p2.GetId()}");
+public class Person
 {
-    public decimal Balance { get; set; }
-    public string Owner { get; set; }
-
-    public Account(string owner)
+    public string Name { get; set; }
+    public Person(string name)
     {
-        Owner = owner;
-        Balance = 0;
+        Name = name;
     }
-    public Account(string owner, decimal balance)
+    public string GetId()
     {
-        Owner = owner;
-        Balance = balance;
+        return Name.ToLower();
+    }
+}
+
+public class Employee : Person
+{
+    public string Role { get; set; }
+    public Employee(string name, string role) : base(name)
+    {
+        Role = role;
     }
 }
