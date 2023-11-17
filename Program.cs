@@ -1,44 +1,31 @@
-﻿//Inheritance
-using System.Reflection.Metadata.Ecma335;
+﻿Person p1 = new();
+Person p2 = new Employee();
+Person p3 = new Customer();
 
-Person p1 = new("Aric");
-Employee p2 = new("Zack", "CEO");
+p1.Greeting();
+p2.Greeting();
+p3.Greeting();
 
-Console.WriteLine($"{p1.Name}: {p1.GetId()}");
-Console.WriteLine($"{p2.Name}: {p2.GetId()}");
 
-public interface ISalary
-{
-    decimal GetSalary();
-}
-//can use be set as public "sealed" class Person to prevent inheritance
+
 public class Person
 {
-    public string Name { get; set; }
-    public Person(string name)
+    public virtual void Greeting()
     {
-        Name = name;
-    }
-    public virtual string GetId()
-    {
-        return Name.ToLower();
+        Console.WriteLine("I am a reg");
     }
 }
-
-public class Employee : Person, ISalary
+public class Employee : Person
 {
-    public string Role { get; set; }
-    public Employee(string name, string role) : base(name)
+    public override void Greeting()
     {
-        Role = role;
+        Console.WriteLine("I am an Employee");
     }
-    public override string GetId()
+}
+public class Customer : Person
+{
+    public override void Greeting()
     {
-        return $"{Role.ToLower()}-{base.GetId()}";
-    }
-
-    public decimal GetSalary()
-    {
-        return 6000;
+        Console.WriteLine("I am a Customer");
     }
 }
