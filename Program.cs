@@ -1,23 +1,22 @@
-﻿using System.Security.AccessControl;
-
+﻿
 Person p1 = new("zack", 33, false);
 Person p2 = new("kyle", 31, true);
 Person p3 = new("Daniel", 35, false);
 
-Hero h1 = new("Blair", 9999, 9999);
+// Hero h1 = new("Blair", 9999, 9999);
 
-Console.WriteLine(p1.Name);
-Console.WriteLine(p2.Age);
-Console.WriteLine(p3.InSchool);
+// Console.WriteLine(p1.Name);
+// Console.WriteLine(p2.Age);
+// Console.WriteLine(p3.InSchool);
 
-p1.PrintGreeting();
-string greeting = p1.GetGreeting();
-Math add = new();
-int result = add.Sum(10, 77);
-Console.WriteLine(result);
+// p1.PrintGreeting();
+// string greeting = p1.GetGreeting();
+// Math add = new();
+// int result = add.Sum(10, 77);
+// Console.WriteLine(result);
 
 
-Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
+// Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
 
 
 class Person
@@ -62,4 +61,29 @@ public class Math
         return a + b;
     }
 
+}
+
+
+public class House
+{
+    int currentYear = 2023;
+    public House(int yearbuilt, int housesize)
+    {
+        YearBuilt = yearbuilt;
+        HouseSize = housesize;
+    }
+    public int YearBuilt { get; set; }
+    public int HouseSize { get; set; }
+    private int HowOld()
+    {
+        return currentYear - YearBuilt;
+    }
+    public bool CanBeSold()
+    {
+        if (HowOld() >= 15)
+        {
+            return true;
+        }
+        return false;
+    }
 }
