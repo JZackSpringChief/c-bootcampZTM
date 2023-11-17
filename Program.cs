@@ -1,37 +1,22 @@
-﻿ICar toyota = new ToyotaTacoma();
-ICar nissan = new NissanZ();
+﻿//method overloading
+Account account2 = new("Kyle");
+Account account1 = new("zack", 20);
 
-Console.WriteLine($"{toyota.GetModel()}: {toyota.GetTopSpeed()} km/h");
-Console.WriteLine($"{nissan.GetModel()}: {nissan.GetTopSpeed()} km/h");
-
-public interface ICar
+Console.WriteLine(account1.Balance);
+Console.WriteLine(account2.Balance);
+public class Account
 {
-    string GetModel();
-    int GetTopSpeed();
-}
+    public decimal Balance { get; set; }
+    public string Owner { get; set; }
 
-public class ToyotaTacoma : ICar
-{
-    public string GetModel()
+    public Account(string owner)
     {
-        return "Toyota Tacoma";
+        Owner = owner;
+        Balance = 0;
     }
-
-    public int GetTopSpeed()
+    public Account(string owner, decimal balance)
     {
-        return 300;
-    }
-}
-
-public class NissanZ : ICar
-{
-    public string GetModel()
-    {
-        return "Nissan Z";
-    }
-
-    public int GetTopSpeed()
-    {
-        return 400;
+        Owner = owner;
+        Balance = balance;
     }
 }
