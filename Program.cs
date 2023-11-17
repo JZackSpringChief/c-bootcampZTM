@@ -16,11 +16,7 @@ Person p3 = new("Daniel", 35, false);
 // Math add = new();
 // int result = add.Sum(10, 77);
 // Console.WriteLine(result);
-
-
 // Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
-
-
 class Person
 {
     public Person(string name, int age, bool inschool)
@@ -55,7 +51,6 @@ class Hero
     public int Attack { get; set; }
     public int Defense { get; set; }
 }
-
 public class Math
 {
     public int Sum(int a, int b)
@@ -64,9 +59,6 @@ public class Math
     }
 
 }
-
-
-
 public class House
 {
     int currentYear = 2023;
