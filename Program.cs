@@ -1,11 +1,4 @@
-﻿House h1 = new(1993, 1500);
-Console.WriteLine(h1.HouseSize);
-
-Person p1 = new("zack", 33, false);
-Person p2 = new("kyle", 31, true);
-Person p3 = new("Daniel", 35, false);
-
-// Hero h1 = new("Blair", 9999, 9999);
+﻿// Hero h1 = new("Blair", 9999, 9999);
 
 // Console.WriteLine(p1.Name);
 // Console.WriteLine(p2.Age);
