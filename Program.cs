@@ -1,7 +1,5 @@
 ﻿using Namespaces.Data;
 Person person = new();
-public const int Year = 2023;
-
 int result = SuperMath.Sum(10, 32);
 Console.WriteLine(result);
 Console.WriteLine(SuperMath.PI);
