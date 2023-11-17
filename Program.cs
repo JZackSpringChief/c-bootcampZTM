@@ -1,4 +1,6 @@
-﻿
+﻿House h1 = new(1993, 1500);
+Console.WriteLine(h1.HouseSize);
+
 Person p1 = new("zack", 33, false);
 Person p2 = new("kyle", 31, true);
 Person p3 = new("Daniel", 35, false);
@@ -62,6 +64,7 @@ public class Math
     }
 
 }
+
 
 
 public class House
