@@ -1,4 +1,10 @@
-﻿public interface ICar
+﻿ICar toyota = new ToyotaTacoma();
+ICar nissan = new NissanZ();
+
+Console.WriteLine($"{toyota.GetModel()}: {toyota.GetTopSpeed()} km/h");
+Console.WriteLine($"{nissan.GetModel()}: {nissan.GetTopSpeed()} km/h");
+
+public interface ICar
 {
     string GetModel();
     int GetTopSpeed();
