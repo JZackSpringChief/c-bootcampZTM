@@ -26,7 +26,7 @@ public class Checking
     public double Balance { get; set; }
     public double Deposit()
     {
-        Console.WriteLine("please enter amount you wish to deposit: ");
+        Console.WriteLine("Please enter amount you wish to deposit: ");
         double a = Convert.ToDouble(Console.ReadLine());
         return a + Balance;
     }
@@ -66,7 +66,6 @@ public class Premium : Checking
         double amount = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Withdrawing {amount} from Account ID '{ID}'.");
         return Balance += amount;
-
     }
     public override double TransferDeposit()
     {
@@ -74,7 +73,6 @@ public class Premium : Checking
         double amount = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Depositing {amount} from Account ID '{ID}'.");
         return Balance -= amount;
-
     }
 }
 
@@ -82,8 +80,6 @@ public class Premium : Checking
 // you should be able to calculate interest based on the current balance of the checking account;
 
 // you should be able to calculate interest based on the current balance of the checking account and an input
-
-//you should be able to print the ID and the current blanace of a checking account at anytime;
 
 //the premimun account has the same behavior as the checking account.
 //The only difference is that tha premium account gets a 1% extra interest on top of the user input;
