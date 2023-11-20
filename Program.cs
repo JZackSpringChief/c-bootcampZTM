@@ -2,6 +2,18 @@
 Console.WriteLine("Welcome to the Accounting System 1.0");
 
 //The accounting system should have a checking account and a premium account;
+Checking c1 = new(200, 98.78);
+Console.WriteLine(c1.Balance);
+public class Checking
+{
+    public Checking(int id, double balance)
+    {
+        ID = id;
+        Balance = balance;
+    }
+    public int ID { get; set; }
+    public double Balance { get; set; }
+}
 
 //a checking account has an ID(number) and a balance(decimal number);
 
