@@ -1,9 +1,9 @@
-﻿//greet user with "Welcome to the Accounting System 1.0"
+﻿
 Console.WriteLine("Welcome to the Accounting System 1.0");
 
 //The accounting system should have a checking account and a premium account;
 Checking c1 = new(200, 98.78);
-c1.Deposit();
+Console.WriteLine(c1.Deposit());
 Console.WriteLine(c1.Balance);
 
 public class Checking
@@ -17,7 +17,7 @@ public class Checking
     public double Balance { get; set; }
     public double Deposit()
     {
-        Console.WriteLine("please enter amount you wish to deposit");
+        Console.WriteLine("please enter amount you wish to deposit: ");
         double a = Convert.ToDouble(Console.ReadLine());
         return a + Balance;
     }
