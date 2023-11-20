@@ -1,4 +1,4 @@
-// //Inheritance
+//Inheritance
 // using System.Reflection.Metadata.Ecma335;
 
 // Person p1 = new("Aric");
@@ -11,7 +11,7 @@
 // {
 //     decimal GetSalary();
 // }
-// //can use be set as public "sealed" class Person to prevent inheritance
+//can use be set as public "sealed" class Person to prevent inheritance
 // public class Person
 // {
 //     public string Name { get; set; }
