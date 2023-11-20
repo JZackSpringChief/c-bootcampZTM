@@ -37,15 +37,17 @@ public class Checking
     }
     public virtual double TransferDeposit()
     {
+        Console.WriteLine("enter amout you wish to add to your Premium account");
         double amount = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Depositing {amount} from Account ID '{ID}'.");
-        return Balance += amount;
+        return Balance -= amount;
     }
     public virtual double TransferWithdraw()
     {
+        Console.WriteLine("enter amount you wish to take from your Premium account");
         double amount = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Withdrawing {amount} from Account ID '{ID}'.");
-        return Balance -= amount;
+        return Balance += amount;
     }
 }
 public class Premium : Checking
@@ -60,11 +62,19 @@ public class Premium : Checking
     }
     public override double TransferWithdraw()
     {
-        return base.TransferWithdraw();
+        Console.WriteLine("enter amount you wish to take from your Checking account");
+        double amount = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Withdrawing {amount} from Account ID '{ID}'.");
+        return Balance += amount;
+
     }
     public override double TransferDeposit()
     {
-        return base.TransferDeposit();
+        Console.WriteLine("enter amout you wish to add to your Checking account");
+        double amount = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Depositing {amount} from Account ID '{ID}'.");
+        return Balance -= amount;
+
     }
 }
 
@@ -79,5 +89,3 @@ public class Premium : Checking
 //The only difference is that tha premium account gets a 1% extra interest on top of the user input;
 
 //you should be able to transfer money from the one account to another at any time;
-
-//
