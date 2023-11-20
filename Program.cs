@@ -32,9 +32,9 @@ public class Checking
         double interestRate = Convert.ToDouble(Console.ReadLine());
         return Balance * interestRate;
     }
-    public double Transfer()
+    public virtual double Transfer()
     {
-
+        //balance from checking to premium
     }
 }
 public class Premium : Checking
@@ -46,6 +46,10 @@ public class Premium : Checking
     public override double Interest()
     {
         return base.Interest() * 0.1;
+    }
+    public override double Transfer()
+    {
+        return base.Transfer();
     }
 }
 
