@@ -1,6 +1,5 @@
 ﻿
 Console.WriteLine("Welcome to the Accounting System 1.0");
-
 //The accounting system should have a checking account and a premium account;
 Checking c1 = new(100, 0);
 Premium p1 = new(200, 0);
@@ -10,6 +9,10 @@ double depositAmount = c1.Deposit();
 c1.Balance = depositAmount;
 double premiumDepositAmount = p1.Deposit();
 p1.Balance = premiumDepositAmount;
+Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
+Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
+double depo = p1.TransferDeposit();
+c1.Balance = depo;
 Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
 public class Checking
@@ -32,9 +35,17 @@ public class Checking
         double interestRate = Convert.ToDouble(Console.ReadLine());
         return Balance * interestRate;
     }
-    public virtual double Transfer()
+    public virtual double TransferDeposit()
     {
-        //balance from checking to premium
+        double amount = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Depositing {amount} from Account ID '{ID}'.");
+        return Balance += amount;
+    }
+    public virtual double TransferWithdraw()
+    {
+        double amount = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Withdrawing {amount} from Account ID '{ID}'.");
+        return Balance -= amount;
     }
 }
 public class Premium : Checking
@@ -47,9 +58,13 @@ public class Premium : Checking
     {
         return base.Interest() * 0.1;
     }
-    public override double Transfer()
+    public override double TransferWithdraw()
     {
-        return base.Transfer();
+        return base.TransferWithdraw();
+    }
+    public override double TransferDeposit()
+    {
+        return base.TransferDeposit();
     }
 }
 
