@@ -21,14 +21,24 @@ public class Checking
         double a = Convert.ToDouble(Console.ReadLine());
         return a + Balance;
     }
-}
-public class Premium : Checking
-{
-    public Premium(int id, double balance) : base(id, balance)
+    public virtual double Interest()
     {
-
+        double interestRate = Convert.ToDouble(Console.ReadLine());
+        return Balance * interestRate;
     }
 }
+public class Premimun : Checking
+{
+    public Premimun(int id, double balance) : base(id, balance)
+    {
+    }
+
+    public override double Interest()
+    {
+        return base.Interest();
+    }
+}
+
 
 //a checking account has an ID(number) and a balance(decimal number);
 
