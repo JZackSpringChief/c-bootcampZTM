@@ -11,6 +11,8 @@ double premiumDepositAmount = p1.Deposit();
 p1.Balance = premiumDepositAmount;
 Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
+double transferAmount = p1.Withdraw();
+
 public class Checking
 {
     public Checking(int id, double balance)
@@ -27,9 +29,12 @@ public class Checking
         double totalAmount = a + Balance;
         return totalAmount;
     }
-    public double Transfer()
+    public double Withdraw()
     {
-
+        Console.WriteLine("Please enter amount you wish to Withdraw or transfer: ");
+        double a = Convert.ToDouble(Console.ReadLine());
+        double totalAmount = Balance - a;
+        return totalAmount;
     }
     public virtual double Interest()
     {
