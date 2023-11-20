@@ -11,10 +11,6 @@ double premiumDepositAmount = p1.Deposit();
 p1.Balance = premiumDepositAmount;
 Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
-double depo = p1.TransferDeposit();
-c1.Balance = depo;
-Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
-Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
 public class Checking
 {
     public Checking(int id, double balance)
@@ -28,26 +24,17 @@ public class Checking
     {
         Console.WriteLine("Please enter amount you wish to deposit: ");
         double a = Convert.ToDouble(Console.ReadLine());
-        return a + Balance;
+        double totalAmount = a + Balance;
+        return totalAmount;
+    }
+    public double Transfer()
+    {
+
     }
     public virtual double Interest()
     {
         double interestRate = Convert.ToDouble(Console.ReadLine());
         return Balance * interestRate;
-    }
-    public virtual double TransferDeposit()
-    {
-        Console.WriteLine("enter amout you wish to add to your Premium account");
-        double amount = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine($"Depositing {amount} from Account ID '{ID}'.");
-        return Balance -= amount;
-    }
-    public virtual double TransferWithdraw()
-    {
-        Console.WriteLine("enter amount you wish to take from your Premium account");
-        double amount = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine($"Withdrawing {amount} from Account ID '{ID}'.");
-        return Balance += amount;
     }
 }
 public class Premium : Checking
@@ -60,22 +47,7 @@ public class Premium : Checking
     {
         return base.Interest() * 0.1;
     }
-    public override double TransferWithdraw()
-    {
-        Console.WriteLine("enter amount you wish to take from your Checking account");
-        double amount = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine($"Withdrawing {amount} from Account ID '{ID}'.");
-        return Balance += amount;
-    }
-    public override double TransferDeposit()
-    {
-        Console.WriteLine("enter amout you wish to add to your Checking account");
-        double amount = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine($"Depositing {amount} from Account ID '{ID}'.");
-        return Balance -= amount;
-    }
 }
-
 
 // you should be able to calculate interest based on the current balance of the checking account;
 
