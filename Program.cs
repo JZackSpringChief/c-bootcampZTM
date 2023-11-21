@@ -18,8 +18,7 @@ internal class Program
         double premiumWithraw = Convert.ToDouble(Console.ReadLine());
         p1.Balance = p1.Withdraw(premiumWithraw);
         c1.Balance += premiumWithraw;
-        Console.WriteLine($"The Account ID '{c1.ID}' has a new checking balance of: {c1.Balance}");
-        Console.WriteLine($"The Account ID '{p1.ID}' has a new premium balance of: {p1.Balance}");
+        Print(c1, p1);
         Console.WriteLine("enter amount for interest?");
         double checkingInterest = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Account 1 Interest: {c1.Interest(checkingInterest)}");
