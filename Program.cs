@@ -21,9 +21,18 @@ Console.WriteLine("How much would you like to transfer to your Checking account?
 double premiumWithraw = Convert.ToDouble(Console.ReadLine());
 double result3 = p1.Withdraw(premiumWithraw);
 c1.Balance += premiumWithraw;
-Console.WriteLine($"result3: {result3}");
 Console.WriteLine($"The Account ID '{c1.ID}' has a new checking balance of: {c1.Balance}");
 p1.Balance = result3;
+Console.WriteLine($"The Account ID '{p1.ID}' has a new premium balance of: {p1.Balance}");
+Console.WriteLine("enter amount for interest?");
+double checkingInterest = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine($"Account 1 Interest: {c1.Interest(checkingInterest)}");
+Console.WriteLine($"Account 2 Interest: {p1.Interest(checkingInterest)}");
+double result4 = c1.Interest(checkingInterest);
+double result5 = p1.Interest(checkingInterest);
+c1.Balance += result4;
+p1.Balance += result5;
+Console.WriteLine($"The Account ID '{c1.ID}' has a new checking balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a new premium balance of: {p1.Balance}");
 
 public class Checking
@@ -47,7 +56,6 @@ public class Checking
     }
     public virtual double Interest(double d)
     {
-        //double interestRate = Convert.ToDouble(Console.ReadLine());
         return Balance * d;
     }
 }
@@ -59,15 +67,6 @@ public class Premium : Checking
 
     public override double Interest(double d)
     {
-        return base.Interest(d) + 0.01;
+        return base.Interest(d + 0.01);
     }
 }
-
-// you should be able to calculate interest based on the current balance of the checking account;
-
-// you should be able to calculate interest based on the current balance of the checking account and an input
-
-//the premimun account has the same behavior as the checking account.
-//The only difference is that tha premium account gets a 1% extra interest on top of the user input;
-
-//you should be able to transfer money from the one account to another at any time;
