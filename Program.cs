@@ -20,25 +20,11 @@ Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
 Console.WriteLine("How much would you like to transfer to your Checking account?");
 double premiumWithraw = Convert.ToDouble(Console.ReadLine());
 double result3 = p1.Withdraw(premiumWithraw);
-
-// c1.Balance += result3;
-// Console.WriteLine(c1.Balance);
-
-// double depositAmount = c1.Deposit(a);
-// c1.Balance = depositAmount;
-// 
-// double b = Convert.ToDouble(Console.ReadLine());
-// double premiumDepositAmount = p1.Deposit(b);
-// p1.Balance = premiumDepositAmount;
-// Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
-// Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
-// Console.WriteLine("Please enter amount you wish to Withdraw or transfer into your Checking Account: ");
-// double c = Convert.ToDouble(Console.ReadLine());
-// p1.Balance = premiumDepositAmount - c;
-// c1.Balance = depositAmount + c;
-// p1.Withdraw(c);
-// Console.WriteLine(c1.Balance);
-// Console.WriteLine(p1.Balance);
+c1.Balance += premiumWithraw;
+Console.WriteLine($"result3: {result3}");
+Console.WriteLine($"The Account ID '{c1.ID}' has a new checking balance of: {c1.Balance}");
+p1.Balance = result3;
+Console.WriteLine($"The Account ID '{p1.ID}' has a new premium balance of: {p1.Balance}");
 
 public class Checking
 {
