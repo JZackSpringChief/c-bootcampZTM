@@ -1,26 +1,37 @@
 ﻿
+using System.Xml.XPath;
+
 Console.WriteLine("Welcome to the Accounting System 1.0");
 Checking c1 = new(100, 0);
 Premium p1 = new(200, 0);
 Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
 Console.WriteLine("Please enter amount you wish to deposit in Checking account: ");
-double a = Convert.ToDouble(Console.ReadLine());
-double depositAmount = c1.Deposit(a);
-c1.Balance = depositAmount;
+double checkingDeposit = Convert.ToDouble(Console.ReadLine());
+double result = c1.Deposit(checkingDeposit);
+c1.Balance = result;
 Console.WriteLine("Please enter amount you wish to depsit in Premium account: ");
-double b = Convert.ToDouble(Console.ReadLine());
-double premiumDepositAmount = p1.Deposit(b);
-p1.Balance = premiumDepositAmount;
-Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
-Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
-Console.WriteLine("Please enter amount you wish to Withdraw or transfer into your Checking Account: ");
-double c = Convert.ToDouble(Console.ReadLine());
-p1.Balance = premiumDepositAmount - c;
-c1.Balance = depositAmount + c;
-p1.Withdraw(c);
+double premiumDeposit = Convert.ToDouble(Console.ReadLine());
+double result2 = p1.Deposit(premiumDeposit);
+p1.Balance = result2;
 Console.WriteLine(c1.Balance);
 Console.WriteLine(p1.Balance);
+
+// double depositAmount = c1.Deposit(a);
+// c1.Balance = depositAmount;
+// 
+// double b = Convert.ToDouble(Console.ReadLine());
+// double premiumDepositAmount = p1.Deposit(b);
+// p1.Balance = premiumDepositAmount;
+// Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
+// Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
+// Console.WriteLine("Please enter amount you wish to Withdraw or transfer into your Checking Account: ");
+// double c = Convert.ToDouble(Console.ReadLine());
+// p1.Balance = premiumDepositAmount - c;
+// c1.Balance = depositAmount + c;
+// p1.Withdraw(c);
+// Console.WriteLine(c1.Balance);
+// Console.WriteLine(p1.Balance);
 
 public class Checking
 {
@@ -43,7 +54,7 @@ public class Checking
     }
     public virtual double Interest(double d)
     {
-        double interestRate = Convert.ToDouble(Console.ReadLine());
+        //double interestRate = Convert.ToDouble(Console.ReadLine());
         return Balance * d;
     }
 }
