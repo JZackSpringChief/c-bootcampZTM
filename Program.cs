@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Concurrent;
 using System.Xml.XPath;
 
 Console.WriteLine("Welcome to the Accounting System 1.0");
@@ -14,8 +15,14 @@ Console.WriteLine("Please enter amount you wish to depsit in Premium account: ")
 double premiumDeposit = Convert.ToDouble(Console.ReadLine());
 double result2 = p1.Deposit(premiumDeposit);
 p1.Balance = result2;
-Console.WriteLine(c1.Balance);
-Console.WriteLine(p1.Balance);
+Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
+Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
+Console.WriteLine("How much would you like to transfer to your Checking account?");
+double premiumWithraw = Convert.ToDouble(Console.ReadLine());
+double result3 = p1.Withdraw(premiumWithraw);
+
+// c1.Balance += result3;
+// Console.WriteLine(c1.Balance);
 
 // double depositAmount = c1.Deposit(a);
 // c1.Balance = depositAmount;
