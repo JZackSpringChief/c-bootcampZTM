@@ -1,10 +1,10 @@
-// // Hero h1 = new("Blair", 9999, 9999);
-// // p1.PrintGreeting();
-// // string greeting = p1.GetGreeting();
-// // Math add = new();
-// // int result = add.Sum(10, 77);
-// // Console.WriteLine(result);
-// // Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
+// Hero h1 = new("Blair", 9999, 9999);
+// p1.PrintGreeting();
+// string greeting = p1.GetGreeting();
+// Math add = new();
+// int result = add.Sum(10, 77);
+// Console.WriteLine(result);
+// Console.WriteLine($"Hero Name: {h1.Name}. Hero's Attack: OVER {h1.Attack}. Hero's Defense: {h1.Defense}.");
 // class Person
 // {
 //     public Person(string name, int age, bool inschool)

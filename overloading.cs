@@ -1,4 +1,4 @@
-// //method overloading
+// method overloading
 // Account account2 = new("Kyle");
 // Account account1 = new("zack", 20);
 

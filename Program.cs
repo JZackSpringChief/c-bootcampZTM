@@ -55,7 +55,7 @@ public class Premium : Checking
 
     public override double Interest(double d)
     {
-        return base.Interest(d) * 0.1;
+        return base.Interest(d) + 0.01;
     }
 }
 
