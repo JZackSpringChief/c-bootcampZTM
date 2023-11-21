@@ -1,17 +1,20 @@
 ﻿
 Console.WriteLine("Welcome to the Accounting System 1.0");
-//The accounting system should have a checking account and a premium account;
 Checking c1 = new(100, 0);
 Premium p1 = new(200, 0);
 Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
-double depositAmount = c1.Deposit();
+Console.WriteLine("Please enter amount you wish to deposit in Checking account: ");
+double a = Convert.ToDouble(Console.ReadLine());
+double depositAmount = c1.Deposit(a);
 c1.Balance = depositAmount;
-double premiumDepositAmount = p1.Deposit();
+Console.WriteLine("Please enter amount you wish to depsit in Premium account: ");
+double b = Convert.ToDouble(Console.ReadLine());
+double premiumDepositAmount = p1.Deposit(b);
 p1.Balance = premiumDepositAmount;
 Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
 Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
-double transferAmount = p1.Withdraw();
+// double transferAmount = p1.Withdraw();
 
 public class Checking
 {
@@ -22,10 +25,8 @@ public class Checking
     }
     public int ID { get; set; }
     public double Balance { get; set; }
-    public double Deposit()
+    public double Deposit(double a)
     {
-        Console.WriteLine("Please enter amount you wish to deposit: ");
-        double a = Convert.ToDouble(Console.ReadLine());
         double totalAmount = a + Balance;
         return totalAmount;
     }
