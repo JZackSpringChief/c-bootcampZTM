@@ -1,7 +1,4 @@
 ﻿
-using System.Collections.Concurrent;
-using System.Xml.XPath;
-
 Console.WriteLine("Welcome to the Accounting System 1.0");
 Checking c1 = new(100, 0);
 Premium p1 = new(200, 0);
@@ -48,6 +45,11 @@ public class Checking
     {
         double totalAmount = a + Balance;
         return totalAmount;
+    }
+    public void Print()
+    {
+        Console.WriteLine($"The Account ID '{c1.ID}' has a balance of: {c1.Balance}");
+        Console.WriteLine($"The Account ID '{p1.ID}' has a balance of: {p1.Balance}");
     }
     public double Withdraw(double c)
     {
