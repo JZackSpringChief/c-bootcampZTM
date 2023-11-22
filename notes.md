@@ -37,3 +37,18 @@ support services; === > tones of areas;
 engineering courses; members only section;
 
 OH and safty;
+
+ability to add resume and cover letter;
+
+make website look more beautiful;
+
+introduce blackfoot language;
+update photos
+
+minimal viable product;
+
+chief and council
+
+related bodies; linking back to thiers and our websites;
+
+news paper ===== and news into one app;
