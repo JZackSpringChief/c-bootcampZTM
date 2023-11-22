@@ -23,7 +23,7 @@ migrate ALL websites back to main site which is siksikanation.com;
 
 FORMS; back-end logic;
 
-AI chat box;
+AI chat bot;
 
 land managment and consultation;
 =====> basic information that user friendly
@@ -31,3 +31,9 @@ land managment and consultation;
 all forms;
 
 USER FRIENDLY!!!!;
+
+support services; === > tones of areas;
+
+engineering courses; members only section;
+
+OH and safty;
