@@ -1,6 +1,6 @@
-namespace Namespaces.Data;
+// namespace Namespaces.Data;
 
-internal class Person
-{
+// internal class Person
+// {
 
-}
+// }

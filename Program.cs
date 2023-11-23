@@ -26,4 +26,18 @@ public class Race
     public string Name { get; set; }
     public string Date { get; set; }
     public string TrackName { get; set; }
+
+    public AddDriver()
+    {
+        return
+    }
+}
+
+public class Driver
+{
+    public Driver(string name)
+    {
+        Name = name;
+    }
+    string Name { get; set; }
 }
