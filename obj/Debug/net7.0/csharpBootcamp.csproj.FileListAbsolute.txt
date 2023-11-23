@@ -1,0 +1,14 @@
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/bin/Debug/net7.0/csharpBootcamp
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/bin/Debug/net7.0/csharpBootcamp.deps.json
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/bin/Debug/net7.0/csharpBootcamp.runtimeconfig.json
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/bin/Debug/net7.0/csharpBootcamp.dll
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/bin/Debug/net7.0/csharpBootcamp.pdb
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.AssemblyInfoInputs.cache
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.AssemblyInfo.cs
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.csproj.CoreCompileInputs.cache
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.dll
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/refint/csharpBootcamp.dll
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.pdb
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/csharpBootcamp.genruntimeconfig.cache
+/Users/zackspringchief/Documents/Csharp/csharpBootcamp/obj/Debug/net7.0/ref/csharpBootcamp.dll
