@@ -1,5 +1,5 @@
-namespace Namespace.Data;
-internal class House
-{
+// namespace Namespace.Data;
+// internal class House
+// {
 
-}
+// }

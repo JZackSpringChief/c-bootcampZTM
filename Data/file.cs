@@ -207,6 +207,3 @@
 //         }
 //     }
 // }
-// //simplify functions
-// //add testing
-// //type casting is so cool

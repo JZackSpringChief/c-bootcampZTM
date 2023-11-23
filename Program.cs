@@ -27,9 +27,9 @@ public class Race
     public string Date { get; set; }
     public string TrackName { get; set; }
 
-    public AddDriver()
+    public void AddDriver()
     {
-        return
+        Console.WriteLine($"");
     }
 }
 
