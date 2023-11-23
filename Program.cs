@@ -1,12 +1,18 @@
-﻿//generic queue; FIFO
-var messages = new Queue<string>();
-
-messages.Enqueue(".NET is Amazing");
-messages.Enqueue("I wanna be the very best");
-messages.Enqueue("The best there ever was");
-
-while (messages.Count > 0)
+﻿//generic dictionaary;
+var grades = new Dictionary<char, int>
 {
-    var message = messages.Dequeue();
-    Console.WriteLine(message);
+    { 'A', 100 },
+    { 'B', 85}
+};
+
+grades.Add('C', 70);
+grades['D'] = 65;
+grades['E'] = 50;
+grades['F'] = 49;
+
+Console.WriteLine(grades['E']);
+
+foreach (var grade in grades)
+{
+    Console.WriteLine($"{grade.Key}: {grade.Value}");
 }
