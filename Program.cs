@@ -15,4 +15,6 @@ Console.WriteLine(grades['E']);
 foreach (var grade in grades)
 {
     Console.WriteLine($"{grade.Key}: {grade.Value}");
+
 }
+Console.WriteLine(grades.ContainsKey('F'));
