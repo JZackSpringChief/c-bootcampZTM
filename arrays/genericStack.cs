@@ -1,26 +1,18 @@
-// var numbers = new List<int>();
-// var day = 22;
-// numbers.Add(day);
+// //Generic stack; LIFO
+// var countries = new Stack<string>();
 
-// foreach (var number in numbers)
+// countries.Push("Canada");
+// countries.Push("Japan");
+// countries.Push("Mexico");
+// countries.Push("China");
+// countries.Push("South Korea");
+
+// var lastCountry = countries.Pop();
+// Console.WriteLine($"The last visited country was: {lastCountry}");
+// var peekCountry = countries.Peek();
+// Console.WriteLine(peekCountry);
+
+// foreach (var country in countries)
 // {
-//     Console.WriteLine($"Number: {number}");
-// }
-
-// var persons = new List<Person>();
-// var person1 = new Person("Blair");
-// persons.Add(person1);
-
-// foreach (var person in persons)
-// {
-//     Console.WriteLine($"Person: {person.Name}");
-// }
-
-// public class Person
-// {
-//     public Person(string name)
-//     {
-//         Name = name;
-//     }
-//     public string Name { get; set; }
+//     Console.WriteLine(country);
 // }
