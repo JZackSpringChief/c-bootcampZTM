@@ -1,35 +1,29 @@
-﻿int[] array1 = new int[4]; //we can use var;
-array1[0] = 7;
-array1[1] = 14;
-array1[2] = 21;
-array1[3] = 14;
+﻿//arraylist 
+using System.Collections;
 
-Console.WriteLine(array1[3]);
+var arrayList = new ArrayList();
 
-//better way to assain array
-var array2 = new int[] { 7, 14, 21, 14 };
-Console.WriteLine(array2[2]);
+var day = 22;
+arrayList.Add(day);
 
-//alternative syntax
-int[] array3 = { 7, 14, 21, 14 };
+var person1 = new Person("Kyle");
+arrayList.Add(person1);
 
-// uninitialized elements;
-int[] array4 = new int[5];
-Console.WriteLine(array4[0]);
+var firstElement = arrayList[0];
+Console.WriteLine($"First Element: {firstElement}");
 
-Person[] persons = new Person[2];
-persons[0] = new Person("Zack");
-persons[1] = new Person("Janna");
-
-Console.WriteLine(persons);
-var person0 = persons[0];
-Console.WriteLine(person0.Name);
-
-foreach (Person person in persons)
+foreach (var item in arrayList)
 {
-    Console.WriteLine(person.Name);
+    var person = item as Person;
+    if (person != null)
+    {
+        Console.WriteLine(person.Name);
+    }
+    else
+    {
+        Console.WriteLine(item);
+    }
 }
-
 
 public class Person
 {
