@@ -1,4 +1,4 @@
-﻿Race race1 = new("FastBoi", "11 / 24 / 2023", "Turtle");
+﻿Race race1 = new("FastBoi", date: "11 / 24 / 2023", trackName: "Turtle");
 Race race2 = new("FasterBoi", "11 / 30 / 2023", "Hare");
 Race race3 = new("FastestBoi", "12 / 02 / 2023", "Godzilla");
 //Console.WriteLine(race1.Date);
@@ -29,7 +29,6 @@ public class Race
 
     public void AddDriver()
     {
-        Console.WriteLine($"");
         int Drivers = 0;
         if (Drivers <= 20)
         {
