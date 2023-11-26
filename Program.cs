@@ -14,7 +14,7 @@ public class Human
     {
         Console.WriteLine("Choose 'a' for Sword or 'b' for Axe");
         string? a = Console.ReadLine();
-        a = a.ToLower();
+        a = a?.ToLower();
 
         if (a == "a")
         {
