@@ -1,7 +1,24 @@
 ﻿var Hero = new Human("Zack", "Lord");
 Console.WriteLine(Hero.WeaponOfChoice());
-public class Human
+
+public interface IPhysicalUnit
 {
+    string WeaponTypel();
+    int addAttack();
+}
+public class Human : IPhysicalUnit
+{
+    public int addAttack()
+    {
+        return 5;
+    }
+
+    public string WeaponTypel()
+    {
+        return "Sword";
+    }
+
+
     public Human(string name, string jobClass)
     {
         Name = name;
@@ -9,6 +26,7 @@ public class Human
     }
     public string Name { get; set; }
     public string JobClass { get; set; }
+
 
     public string WeaponOfChoice()
     {
