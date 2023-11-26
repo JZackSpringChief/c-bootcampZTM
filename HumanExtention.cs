@@ -1,5 +1,3 @@
-
-
 public static class HumanExtentions
 {
     public static string WeaponAndAttackPower(this Human Hero)

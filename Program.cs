@@ -1,13 +1,10 @@
 ﻿var Hero = new Human("Zack", "Lord", 10);
 Console.WriteLine(Hero.IsPhysical());
-
-
 public interface IPhysicalUnit
 {
     int addAttack();
     string IsPhysical { get; }
 }
-
 public class Human : IPhysicalUnit
 {
     public int addAttack()
@@ -35,7 +32,6 @@ public class Human : IPhysicalUnit
             return "true";
         }
     }
-
     public string SpecialMove()
     {
         return "Meggido Flame";
