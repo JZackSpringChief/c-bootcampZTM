@@ -1,16 +1,21 @@
 ﻿//extention methods
 var p1 = new Person("Zack", "Spring Chief");
 Console.WriteLine(p1.ToFullName());
+Console.WriteLine(p1.HasId());
 
-public static class PersonExtention
+public interface IIdentification
 {
-    public static string ToFullName(this Person p1)
+    int Id { get; }
+}
+public static class IdentificationExtentions
+{
+    public static bool HasId(this IIdentification identification)
     {
-        return $"{p1.FirstName} {p1.LastName}";
+        return identification.Id > 0;
     }
 }
 
-public class Person
+public class Person : IIdentification
 {
     public Person(string firstName, string lastName)
     {
@@ -19,4 +24,11 @@ public class Person
     }
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    public int Id
+    {
+        get
+        {
+            return 7;
+        }
+    }
 }
