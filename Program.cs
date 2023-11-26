@@ -1,5 +1,5 @@
-﻿
-
+﻿var Hero = new Human("Zack", "Lord");
+Hero.WeaponOfChoice();
 public class Human
 {
     public Human(string name, string jobClass)
@@ -10,19 +10,23 @@ public class Human
     public string Name { get; set; }
     public string JobClass { get; set; }
 
-    public string WeaponOfChioce()
+    public string WeaponOfChoice()
     {
         Console.WriteLine("Choose 'a' for Sword or 'b' for Axe");
-        string a = Console.ReadLine();
-        string b = Console.ReadLine();
+        string? a = Console.ReadLine();
+        a = a.ToLower();
 
-        if (a)
+        if (a == "a")
         {
-            Console.WriteLine("Take this Excalabur");
+            return "Take this Excalabur";
         }
-        else if (b)
+        else if (a == "b")
         {
-            Console.WriteLine("Take this Armadeus");
+            return "Take this Armadeus";
+        }
+        else
+        {
+            return "please choose 'a' or 'b'";
         }
     }
 }
