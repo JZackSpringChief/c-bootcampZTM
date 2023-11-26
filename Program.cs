@@ -1,39 +1,48 @@
-﻿var Hero = new Human("Zack", "Lord", 10);
-Console.WriteLine(Hero.IsPhysical());
-public interface IPhysicalUnit
-{
-    int addAttack();
-    string IsPhysical { get; }
-}
-public class Human : IPhysicalUnit
-{
-    public int addAttack()
-    {
-        return Attack + 5;
-    }
+﻿Race race1 = new("FastBoi", date: "11 / 24 / 2023", trackName: "Turtle");
+Race race2 = new("FasterBoi", "11 / 30 / 2023", "Hare");
+Race race3 = new("FastestBoi", "12 / 02 / 2023", "Godzilla");
+//Console.WriteLine(race1.Date);
 
-    public string WeaponType()
-    {
-        return "Sword";
-    }
-    public Human(string name, string jobClass, int attack)
+
+var racesCalendar = new Queue<string>();
+racesCalendar.Enqueue($"Race scheduled 'Race Name: {race1.Name} Date: {race1.Date} Trackname: {race1.TrackName}'");
+racesCalendar.Enqueue($"Race scheduled 'Race Name: {race2.Name} Date: {race2.Date} Trackname: {race2.TrackName}'");
+racesCalendar.Enqueue($"Race scheduled 'Race Name: {race3.Name} Date: {race3.Date} Trackname: {race3.TrackName}'");
+
+while (racesCalendar.Count > 0)
+{
+    var raceCalender = racesCalendar.Dequeue();
+    Console.WriteLine(raceCalender);
+}
+
+public class Race
+{
+    public Race(string name, string date, string trackName)
     {
         Name = name;
-        JobClass = jobClass;
-        Attack = attack;
+        Date = date;
+        TrackName = trackName;
     }
     public string Name { get; set; }
-    public string JobClass { get; set; }
-    public int Attack { get; set; }
-    public string IsPhysical
+    public string Date { get; set; }
+    public string TrackName { get; set; }
+
+    public void AddDriver()
     {
-        get
+        int Drivers = 0;
+        if (Drivers <= 20)
         {
-            return "true";
+
         }
     }
-    public string SpecialMove()
-    {
-        return "Meggido Flame";
-    }
 }
+
+public class Driver
+{
+    public Driver(string name)
+    {
+        Name = name;
+    }
+    string Name { get; set; }
+}
+
