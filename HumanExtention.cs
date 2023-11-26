@@ -7,3 +7,10 @@ public static class HumanExtentions
         return $"{Hero.SpecialMove()} adds +{Hero.addAttack()}";
     }
 }
+public static class PhysicalUnitExtention
+{
+    public static bool IsPhysical(this IPhysicalUnit physicalUnit)
+    {
+        return physicalUnit.IsPhysical == "true";
+    }
+}

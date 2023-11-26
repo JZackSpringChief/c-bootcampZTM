@@ -1,12 +1,13 @@
 ﻿var Hero = new Human("Zack", "Lord", 10);
-Console.WriteLine(Hero.WeaponAndAttackPower());
+Console.WriteLine(Hero.IsPhysical());
 
 
 public interface IPhysicalUnit
 {
-    string WeaponType();
     int addAttack();
+    string IsPhysical { get; }
 }
+
 public class Human : IPhysicalUnit
 {
     public int addAttack()
@@ -18,8 +19,6 @@ public class Human : IPhysicalUnit
     {
         return "Sword";
     }
-
-
     public Human(string name, string jobClass, int attack)
     {
         Name = name;
@@ -29,6 +28,14 @@ public class Human : IPhysicalUnit
     public string Name { get; set; }
     public string JobClass { get; set; }
     public int Attack { get; set; }
+    public string IsPhysical
+    {
+        get
+        {
+            return "true";
+        }
+    }
+
     public string SpecialMove()
     {
         return "Meggido Flame";
