@@ -1,5 +1,5 @@
-﻿var Hero = new Human("Zack", "Lord");
-Console.WriteLine(Hero.WeaponOfChoice());
+﻿var Hero = new Human("Zack", "Lord", 10);
+Console.WriteLine(Hero.SpecialMove());
 
 public interface IPhysicalUnit
 {
@@ -10,7 +10,7 @@ public class Human : IPhysicalUnit
 {
     public int addAttack()
     {
-        return 5;
+        return Attack + 5;
     }
 
     public string WeaponTypel()
@@ -19,32 +19,17 @@ public class Human : IPhysicalUnit
     }
 
 
-    public Human(string name, string jobClass)
+    public Human(string name, string jobClass, int attack)
     {
         Name = name;
         JobClass = jobClass;
+        Attack = attack;
     }
     public string Name { get; set; }
     public string JobClass { get; set; }
-
-
-    public string WeaponOfChoice()
+    public int Attack { get; set; }
+    public string SpecialMove()
     {
-        Console.WriteLine("Choose 'a' for Sword or 'b' for Axe");
-        string? a = Console.ReadLine();
-        a = a?.ToLower();
-
-        if (a == "a")
-        {
-            return "Take this Excalabur";
-        }
-        else if (a == "b")
-        {
-            return "Take this Armadeus";
-        }
-        else
-        {
-            return "please choose 'a' or 'b'";
-        }
+        return "Meggido Flame";
     }
 }
