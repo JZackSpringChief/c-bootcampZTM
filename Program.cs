@@ -1,34 +1,28 @@
-﻿//extention methods
-var p1 = new Person("Zack", "Spring Chief");
-Console.WriteLine(p1.ToFullName());
-Console.WriteLine(p1.HasId());
+﻿
 
-public interface IIdentification
+public class Human
 {
-    int Id { get; }
-}
-public static class IdentificationExtentions
-{
-    public static bool HasId(this IIdentification identification)
+    public Human(string name, string jobClass)
     {
-        return identification.Id > 0;
+        Name = name;
+        JobClass = jobClass;
     }
-}
+    public string Name { get; set; }
+    public string JobClass { get; set; }
 
-public class Person : IIdentification
-{
-    public Person(string firstName, string lastName)
+    public string WeaponOfChioce()
     {
-        FirstName = firstName;
-        LastName = lastName;
-    }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int Id
-    {
-        get
+        Console.WriteLine("Choose 'a' for Sword or 'b' for Axe");
+        string a = Console.ReadLine();
+        string b = Console.ReadLine();
+
+        if (a)
         {
-            return 7;
+            Console.WriteLine("Take this Excalabur");
+        }
+        else if (b)
+        {
+            Console.WriteLine("Take this Armadeus");
         }
     }
 }
