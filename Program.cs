@@ -1,5 +1,5 @@
 ﻿var Hero = new Human("Zack", "Lord");
-Hero.WeaponOfChoice();
+Console.WriteLine(Hero.WeaponOfChoice());
 public class Human
 {
     public Human(string name, string jobClass)
