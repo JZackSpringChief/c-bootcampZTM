@@ -26,13 +26,12 @@ public class Race
     public string Name { get; set; }
     public string Date { get; set; }
     public string TrackName { get; set; }
-
     public void AddDriver()
     {
         int Drivers = 0;
-        if (Drivers <= 20)
+        while (Drivers <= 20)
         {
-
+            Drivers += 1;
         }
     }
 }
