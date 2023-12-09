@@ -1,4 +1,4 @@
-var person = new Person("Zack Spring Chief");
+// var person = new Person("Zack Spring Chief");
 // Console.WriteLine($"Name: {person.Name}");
 
 // MethodParameters.ChangeName(ref person);
