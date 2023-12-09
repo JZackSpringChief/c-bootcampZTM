@@ -45,8 +45,7 @@
 //     string Name { get; set; }
 // }
 var person = new Person();
-Console.WriteLine(person);
-
+Console.WriteLine(person.Age);
 public class Person
 {
     const int Age = 21;
