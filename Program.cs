@@ -44,12 +44,47 @@
 //     }
 //     string Name { get; set; }
 // }
-var person = new Person();
-Console.WriteLine(person.Age);
-public class Person
+var temperature = new Temperature(TempuratureUnit.Celcius, 112.6m);
+Console.WriteLine($"Tempurature: {temperature.ValueInCelcius.ToString("0.0")}C");
+enum TempuratureUnit
 {
-    const int Age = 21;
-    const string ProductName = "C# course";
-    const string Version = "2";
-    const string FullProductName = $"{ProductName} {Version}";
+    Celcius,
+    Fahrenheit,
+    Kelvin
+}
+
+class Temperature
+{
+    public Temperature(TempuratureUnit unit, decimal value)
+    {
+        Unit = unit;
+        Value = value;
+    }
+    public TempuratureUnit Unit { get; set; }
+    public decimal Value { get; set; }
+    public decimal ValueInCelcius
+    {
+        get
+        {
+            return Unit switch
+            {
+                TempuratureUnit.Celcius when Value > 100 => Math.Round(Value, 0), //guard clause
+                TempuratureUnit.Celcius => Value,
+                TempuratureUnit.Fahrenheit => (Value - 32) * 5 / 9,
+                TempuratureUnit.Kelvin => Value - 273.5m,
+                _ => 0
+            };
+            // switch (Unit)
+            // {
+            //     case TempuratureUnit.Celcius:
+            //         return Value;
+            //     case TempuratureUnit.Fahrenheit:
+            //         return (Value - 32) * 5 / 9;
+            //     case TempuratureUnit.Kelvin:
+            //         return Value - 273.5m;
+            //     default:
+            //         return 0;
+            // }
+        }
+    }
 }
