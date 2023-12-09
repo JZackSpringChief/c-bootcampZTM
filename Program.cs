@@ -44,4 +44,3 @@
 //     }
 //     string Name { get; set; }
 // }
-//structs;
