@@ -17,11 +17,11 @@
 
 // public class Race
 // {
-//     public Race(string name, string date, string trackName)
+//     public Race(string name, string date, string trackname)
 //     {
 //         Name = name;
 //         Date = date;
-//         TrackName = trackName;
+//         TrackName = trackname;
 //     }
 //     public string Name { get; set; }
 //     public string Date { get; set; }
