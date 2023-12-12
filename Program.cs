@@ -44,45 +44,28 @@
 //     }
 //     string Name { get; set; }
 // }
-int[] array1 = new int[4];
-array1[0] = 2;
-array1[1] = 9;
-array1[2] = 12;
-array1[3] = 90;
 
-Console.WriteLine(array1[0]);
+var numbers = new List<int>();
+var day = 22;
+numbers.Add(day);
 
-//
-var array2 = new int[] { 2, 9, 12, 90 };
-
-Console.WriteLine(array2[0]);
-
-//
-int[] array3 = { 2, 9, 12, 90 };
-Console.WriteLine(array3[0]);
-
-Person[] persons = new Person[9];
-persons[0] = new Person("Dad");
-persons[1] = new Person("Daniel");
-persons[2] = new Person("Zack");
-persons[3] = new Person("Kyle");
-persons[4] = new Person("Nicole");
-
-try
+foreach (var number in numbers)
 {
-    foreach (Person person in persons)
-    {
-        Console.WriteLine(person.Name);
-    }
+    Console.WriteLine($"Number: {number}");
 }
-catch (Exception e)
+
+var persons = new List<Person>();
+var person1 = new Person("Zack");
+var person2 = new Person("Kyle");
+var person3 = new Person("Daniel");
+persons.Add(person1);
+persons.Add(person2);
+persons.Add(person3);
+foreach (var person in persons)
 {
-    Console.WriteLine(e.Message);
+    Console.WriteLine($"Person: {person.Name}");
 }
-finally
-{
-    Console.WriteLine("Catch Block successful");
-}
+Console.WriteLine(persons[2].Name);
 public class Person
 {
     public Person(string name)
