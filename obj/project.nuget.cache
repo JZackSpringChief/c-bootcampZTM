@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p16oPRFYt6e/I1ncmJAHUw8zSyr2mKgtWlNhMEZJzbKLzlLI7WyhmKcumCocbJVjJWnz4Hptcj7p+QXFpjy7EA==",
+  "dgSpecHash": "4MvK0lvjCgzl782hO+NQr3dBoCCVoMJfstn4mjOicYLKG6lOEn7s/6j62/h5ECmGxWD0RYATVf7Mo0R14wkomQ==",
   "success": true,
   "projectFilePath": "/Users/zackspringchief/Documents/Csharp/csharpBootcamp/csharpBootcamp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/zackspringchief/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/zackspringchief/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/zackspringchief/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
