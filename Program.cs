@@ -7,6 +7,8 @@ racesCalendar.Enqueue($"Race scheduled 'Race Name: {race1.RaceName} Date: {race1
 racesCalendar.Enqueue($"Race scheduled 'Race Name: {race2.RaceName} Date: {race2.Date} Trackname: {race2.TrackName}'");
 racesCalendar.Enqueue($"Race scheduled 'Race Name: {race3.RaceName} Date: {race3.Date} Trackname: {race3.TrackName}'");
 
+race1.AddDriver();
+
 while (racesCalendar.Count > 0)
 {
     var raceCalender = racesCalendar.Dequeue();
@@ -23,7 +25,7 @@ public class Race
     public string RaceName { get; set; }
     public string Date { get; set; }
     public string TrackName { get; set; }
-    public static void AddDriver()
+    public void AddDriver()
     {
         var NewDriver = new Queue<string>();
         NewDriver.Enqueue("Zack");

@@ -72,16 +72,3 @@
 //         return base.Interest(d + 0.01);
 //     }
 // }
-// // try
-// // {
-
-// // }
-// // catch
-// // {
-
-// // }
-// // finally
-// // {
-
-// // }
-// //try catch finally..
