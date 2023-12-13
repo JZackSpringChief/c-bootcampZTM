@@ -3,9 +3,9 @@ Race race2 = new("FasterBoi", "11 / 30 / 2023", "Hare");
 Race race3 = new("FastestBoi", "12 / 02 / 2023", "Godzilla");
 //Console.WriteLine(race1.Date);
 var racesCalendar = new Queue<string>();
-racesCalendar.Enqueue($"Race scheduled 'Race Name: {race1.Name} Date: {race1.Date} Trackname: {race1.TrackName}'");
-racesCalendar.Enqueue($"Race scheduled 'Race Name: {race2.Name} Date: {race2.Date} Trackname: {race2.TrackName}'");
-racesCalendar.Enqueue($"Race scheduled 'Race Name: {race3.Name} Date: {race3.Date} Trackname: {race3.TrackName}'");
+racesCalendar.Enqueue($"Race scheduled 'Race Name: {race1.RaceName} Date: {race1.Date} Trackname: {race1.TrackName}'");
+racesCalendar.Enqueue($"Race scheduled 'Race Name: {race2.RaceName} Date: {race2.Date} Trackname: {race2.TrackName}'");
+racesCalendar.Enqueue($"Race scheduled 'Race Name: {race3.RaceName} Date: {race3.Date} Trackname: {race3.TrackName}'");
 
 Driver d1 = new("Zack");
 Driver d2 = new("Kyle");
@@ -38,13 +38,13 @@ while (racesCalendar.Count > 0)
 }
 public class Race
 {
-    public Race(string name, string date, string trackname)
+    public Race(string racename, string date, string trackname)
     {
-        Name = name;
+        RaceName = racename;
         Date = date;
         TrackName = trackname;
     }
-    public string Name { get; set; }
+    public string RaceName { get; set; }
     public string Date { get; set; }
     public string TrackName { get; set; }
     public int AddDriver()
