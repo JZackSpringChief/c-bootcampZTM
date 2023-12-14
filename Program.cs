@@ -7,7 +7,7 @@ racesCalendar.Enqueue($"Race scheduled 'Race Name: {race1.RaceName} Date: {race1
 racesCalendar.Enqueue($"Race scheduled 'Race Name: {race2.RaceName} Date: {race2.Date} Trackname: {race2.TrackName}'");
 racesCalendar.Enqueue($"Race scheduled 'Race Name: {race3.RaceName} Date: {race3.Date} Trackname: {race3.TrackName}'");
 
-race1.AddDriver();
+race1.AddDriver("zack");
 
 
 while (racesCalendar.Count > 0)
@@ -26,13 +26,21 @@ public class Race
     public string RaceName { get; set; }
     public string Date { get; set; }
     public string TrackName { get; set; }
-    public void AddDriver()
+    public void AddDriver(string name)
     {
-        var NewDriver = new Queue<string>();
-        NewDriver.Enqueue("Zack");
-        foreach (var driver in NewDriver)
+        int count = 0;
+        if (count <= 0)
         {
-            Console.WriteLine(driver);
+            Console.WriteLine($"{name} has been added to the race: {RaceName}, which is held on {Date}. Good luck in the {TrackName} Race!");
+            count++;
+        }
+        else if (count >= 20)
+        {
+            Console.WriteLine("Cannot be added to race");
+        }
+        else
+        {
+            Console.WriteLine("Please add driver");
         }
     }
 }
