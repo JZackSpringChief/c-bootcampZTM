@@ -73,6 +73,7 @@ public class Race
     public Queue<string> driverQueue = new Queue<string>();
     public Queue<string> waitingQueue = new Queue<string>();
     public int drivercount = 0;
+    public int waitingcount = 0;
     public void AddDriver(string name)
     {
         driverQueue.Enqueue(name);
@@ -83,8 +84,10 @@ public class Race
             waitingQueue.Enqueue(name);
             while (waitingQueue.Count > 0)
             {
-                var raceCalender = waitingQueue.Dequeue();
-                Console.WriteLine(raceCalender);
+                var waiting = waitingQueue.Dequeue();
+                Console.WriteLine(waiting);
+                waitingcount++;
+                Console.WriteLine(waitingcount);
             }
         }
         else
