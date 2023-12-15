@@ -18,6 +18,7 @@ Driver d3 = new("Kyld");
 race1.AddDriver(d1.Name);
 race1.AddDriver(d2.Name);
 race1.AddDriver(d3.Name);
+
 public class Race
 {
     public Race(string racename, string date, string trackname)
@@ -29,24 +30,14 @@ public class Race
     public string RaceName { get; set; }
     public string Date { get; set; }
     public string TrackName { get; set; }
+    public Queue<string> driverQueue = new Queue<string>();
+    public int drivercount = 0;
     public void AddDriver(string name)
     {
-        int drivercount = 0;
-        if (drivercount <= 0)
-        {
-            drivercount++;
-            Console.WriteLine($"{name} has been added to the race: {RaceName}, which is held on {Date}. Good luck in the {TrackName} Race!");
-            Console.WriteLine(drivercount);
-        }
-        else if (drivercount >= 20)
-        {
-            Console.WriteLine($"{name} cound not be added to race. {name} is now in queue");
-        }
-        else
-        {
-            Console.WriteLine("Please add driver");
-        }
-
+        driverQueue.Enqueue(name);
+        drivercount++;
+        Console.WriteLine($"{name} was added to the race: {RaceName}, which is held on the {Date}. Good luck in the {TrackName} race!");
+        Console.WriteLine(drivercount);
     }
 }
 public class Driver
