@@ -71,16 +71,26 @@ public class Race
     public string Date { get; set; }
     public string TrackName { get; set; }
     public Queue<string> driverQueue = new Queue<string>();
+    public Queue<string> waitingQueue = new Queue<string>();
     public int drivercount = 0;
     public void AddDriver(string name)
     {
         driverQueue.Enqueue(name);
         drivercount++;
-        Console.WriteLine($"{name} was added to the race: {RaceName}, which is held on the {Date}. Good luck in the {TrackName} race!");
-        Console.WriteLine(drivercount);
-        if (drivercount > 21)
+        if (drivercount >= 21)
         {
             Console.WriteLine($"{name} cannot enter the race, added to new queue");
+            waitingQueue.Enqueue(name);
+            while (waitingQueue.Count > 0)
+            {
+                var raceCalender = waitingQueue.Dequeue();
+                Console.WriteLine(raceCalender);
+            }
+        }
+        else
+        {
+            Console.WriteLine($"{name} was added to the race: {RaceName}, which is held on the {Date}. Good luck in the {TrackName} race!");
+            Console.WriteLine(drivercount);
         }
     }
 }
