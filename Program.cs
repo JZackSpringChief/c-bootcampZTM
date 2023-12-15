@@ -1,4 +1,5 @@
-﻿Race race1 = new(racename: "FastBoi", date: "11 / 24 / 2023", trackname: "Turtle");
+﻿
+Race race1 = new(racename: "FastBoi", date: "11 / 24 / 2023", trackname: "Turtle");
 Race race2 = new(racename: "FasterBoi", date: "11 / 30 / 2023", trackname: "Hare");
 Race race3 = new(racename: "FastestBoi", date: "12 / 02 / 2023", trackname: "Godzilla");
 var racesCalendar = new Queue<string>();
@@ -11,9 +12,12 @@ while (racesCalendar.Count > 0)
     var raceCalender = racesCalendar.Dequeue();
     Console.WriteLine(raceCalender);
 }
-race1.AddDriver("zack");
-race1.AddDriver("daniel");
-race1.AddDriver("kyle");
+Driver d1 = new("Zack");
+Driver d2 = new("Daniel");
+Driver d3 = new("Kyld");
+race1.AddDriver(d1.Name);
+race1.AddDriver(d2.Name);
+race1.AddDriver(d3.Name);
 public class Race
 {
     public Race(string racename, string date, string trackname)
@@ -27,22 +31,20 @@ public class Race
     public string TrackName { get; set; }
     public void AddDriver(string name)
     {
-        for (int driverCount = 0; driverCount >= 0; driverCount++)
+        int drivercount = 0;
+        if (drivercount <= 0)
         {
-            if (driverCount <= 0)
-            {
-                Console.WriteLine($"{name} has been added to the race: {RaceName}, which is held on {Date}. Good luck in the {TrackName} Race!");
-                driverCount++;
-                Console.WriteLine(driverCount);
-            }
-            else if (driverCount >= 20)
-            {
-                Console.WriteLine($"{name} cound not be added to race. {name} is now in queue");
-            }
-            else
-            {
-                Console.WriteLine("Please add driver");
-            }
+            drivercount++;
+            Console.WriteLine($"{name} has been added to the race: {RaceName}, which is held on {Date}. Good luck in the {TrackName} Race!");
+            Console.WriteLine(drivercount);
+        }
+        else if (drivercount >= 20)
+        {
+            Console.WriteLine($"{name} cound not be added to race. {name} is now in queue");
+        }
+        else
+        {
+            Console.WriteLine("Please add driver");
         }
 
     }
