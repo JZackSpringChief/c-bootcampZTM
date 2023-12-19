@@ -1,4 +1,4 @@
-﻿
+﻿using DriverClass;
 Race race1 = new(racename: "FastBoi", date: "11 / 24 / 2023", trackname: "Turtle");
 Race race2 = new(racename: "FasterBoi", date: "11 / 30 / 2023", trackname: "Hare");
 Race race3 = new(racename: "FastestBoi", date: "12 / 02 / 2023", trackname: "Godzilla");
@@ -96,12 +96,4 @@ public class Race
             Console.WriteLine(drivercount);
         }
     }
-}
-public class Driver
-{
-    public Driver(string name)
-    {
-        Name = name;
-    }
-    public string Name { get; set; }
 }
